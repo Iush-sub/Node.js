@@ -1,14 +1,23 @@
 //Basic logic of calculator
-
 const readline= require("readline-sync")
 
 
 
 
+function calculator(){
+
+
+
+
+
+
+
+
 const number1= Number(readline.question("Enter the first number: "))
-const number2=Number(readline.question("Enter the second number:"));
+
 const operator=readline.question("Enter operations:")
 
+const number2=Number(readline.question("Enter the second number:"));
 
 
 
@@ -33,8 +42,9 @@ else if(operator ==="%"){
 
 //Division
 else if(operator ==="/"){
-    if(number1===0){
+    if(number2===0){
         console.log("Invalide.")
+        calculator()
     }
 
 
@@ -43,11 +53,19 @@ else if(operator ==="/"){
 
 else
     console.log("Invalide operator. Try again")
+    calculator()
 
-console.log(result)
+console.log("Result " + result) 
 
-again= readline.question("Calculate again? (y/n): ")
-while(again==="y")
+
+let again= readline.question("Calculate again? (y/n): ")
+if(again.toUpperCase()==="Y")
 {
-    again=readline.question()
+    calculator();
 }
+else
+    console.log("Thank you") 
+}
+
+calculator()
+
