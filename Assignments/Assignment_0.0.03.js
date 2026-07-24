@@ -23,9 +23,19 @@ function welcome(){
     console.log("likes: "+ social.likes+"\n")
     console.log("Coments: "+ social.Comments+"\n")
     console.log("Friends: "+ social.friends+"\n")
+    update()
 
 }
+
 welcome()
+
+function update(){
+    const a = read.question("@@@ Press 1 to update @@@")
+    if(a==1){
+        
+    }
+
+}
 
 
 
